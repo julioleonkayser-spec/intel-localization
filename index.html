@@ -1,168 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Intel | Sustainability Through the Ages</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Intel's sustainability journey through time, from 1968 to the 2030 RISE goals." />
+  <title>Intel | Sustainability Through the Ages</title>
+
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap has a left-to-right and a right-to-left file. script.js picks one. -->
+  <link id="bootstrap-ltr" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link id="bootstrap-rtl" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" media="not all" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <a class="skip-link" href="#timeline-heading">Skip to timeline</a>
+
   <!-- ============ HERO ============ -->
   <header class="hero">
-    <div class="hero-inner">
+    <div class="container hero-inner">
       <p class="logo">intel<span class="logo-dot">.</span></p>
       <h1 class="headline">Sustainability<br>Through the Ages</h1>
-      <div class="divider"></div>
+      <div class="divider" aria-hidden="true"></div>
       <p class="subheading">
         Explore Intel's journey through time, discovering how our commitment to
         innovation has shaped a more sustainable future for technology and our planet.
       </p>
 
-      <div class="stat-row">
-        <div class="stat-pill"><strong>2030</strong><span>100% renewable power</span></div>
-        <div class="stat-pill"><strong>2030</strong><span>Net positive water use</span></div>
-        <div class="stat-pill"><strong>2030</strong><span>Zero waste to landfill</span></div>
-      </div>
+      <ul class="stat-row list-unstyled">
+        <li class="stat-pill"><strong>2030</strong><span>100% renewable power</span></li>
+        <li class="stat-pill"><strong>2030</strong><span>Net positive water use</span></li>
+        <li class="stat-pill"><strong>2030</strong><span>Zero waste to landfill</span></li>
+      </ul>
 
-      <p class="scroll-cue">Scroll to view the timeline &middot; Hover over a card to learn more &darr;</p>
+      <p class="scroll-cue">Scroll to view the timeline. Hover over or focus a card to learn more.</p>
     </div>
   </header>
 
-  <!-- ============ TIMELINE ============ -->
-  <main class="timeline-section">
-    <div class="timeline" tabindex="0" aria-label="Intel sustainability timeline, scroll horizontally">
+  <main>
 
-      <article class="card">
-        <img class="card-image" src="images/1968-founded.jpg" alt="Illustration of Intel's founding" loading="lazy" />
-        <div class="card-front">
-          <p class="year">1968</p>
-          <h2 class="title">Intel Founded</h2>
-          <p class="card-hint">Hover to explore &rarr;</p>
-        </div>
-        <div class="card-back">
-          <p>Robert Noyce and Gordon Moore leave Fairchild Semiconductor to found Intel &mdash; the start of a company that would spend six decades redefining computing, and later, redefine what responsible manufacturing looks like.</p>
-        </div>
-      </article>
+    <!-- ============ TIMELINE ============ -->
+    <section class="timeline-section" aria-labelledby="timeline-heading">
+      <h2 id="timeline-heading" class="visually-hidden">Intel sustainability timeline</h2>
+      <ol class="timeline list-unstyled" tabindex="0" aria-label="Intel sustainability timeline, scroll to move through the milestones">
 
-      <article class="card">
-        <img class="card-image" src="images/1971-microprocessor.jpg" alt="Illustration of a microchip" loading="lazy" />
-        <div class="card-front">
-          <p class="year">1971</p>
-          <h2 class="title">First Microprocessor</h2>
-          <p class="card-hint">Hover to explore &rarr;</p>
-        </div>
-        <div class="card-back">
-          <p>The Intel 4004 becomes the world's first commercial microprocessor, packing what used to fill a room onto a single chip &mdash; a huge cut in the energy and materials needed to compute.</p>
-        </div>
-      </article>
+        <li class="tl-card" tabindex="0">
+          <img class="tl-image" src="images/1968-founded.jpg" alt="Illustration of Intel's founding in 1968" width="230" height="110" loading="lazy" />
+          <div class="tl-front">
+            <p class="tl-year">1968</p>
+            <h3 class="tl-title">Intel Founded</h3>
+            <p class="tl-hint" aria-hidden="true">Hover to explore</p>
+          </div>
+          <div class="tl-back">
+            <p>Robert Noyce and Gordon Moore leave Fairchild Semiconductor to found Intel &mdash; the start of a company that would spend six decades redefining computing, and later, redefine what responsible manufacturing looks like.</p>
+          </div>
+        </li>
 
-      <article class="card">
-        <img class="card-image" src="images/1978-8086.jpg" alt="Illustration of an early personal computer" loading="lazy" />
-        <div class="card-front">
-          <p class="year">1978</p>
-          <h2 class="title">The 8086 Processor</h2>
-          <p class="card-hint">Hover to explore &rarr;</p>
-        </div>
-        <div class="card-back">
-          <p>Intel launches the 8086, establishing the x86 architecture that still powers most PCs today &mdash; proof that one efficient design can stay useful for decades instead of being thrown away.</p>
-        </div>
-      </article>
+        <li class="tl-card" tabindex="0">
+          <img class="tl-image" src="images/1971-microprocessor.jpg" alt="Illustration of a microchip" width="230" height="110" loading="lazy" />
+          <div class="tl-front">
+            <p class="tl-year">1971</p>
+            <h3 class="tl-title">First Microprocessor</h3>
+            <p class="tl-hint" aria-hidden="true">Hover to explore</p>
+          </div>
+          <div class="tl-back">
+            <p>The Intel 4004 becomes the world's first commercial microprocessor, packing what used to fill a room onto a single chip &mdash; a huge cut in the energy and materials needed to compute.</p>
+          </div>
+        </li>
 
-      <article class="card">
-        <img class="card-image" src="images/1985-386.jpg" alt="Illustration of layered computer chips" loading="lazy" />
-        <div class="card-front">
-          <p class="year">1985</p>
-          <h2 class="title">The 386 Processor</h2>
-          <p class="card-hint">Hover to explore &rarr;</p>
-        </div>
-        <div class="card-back">
-          <p>The 32-bit Intel386 introduces real multitasking &mdash; doing far more work per chip and per watt, an early lesson in getting more performance out of the same footprint.</p>
-        </div>
-      </article>
+        <li class="tl-card" tabindex="0">
+          <img class="tl-image" src="images/1978-8086.jpg" alt="Illustration of an early personal computer" width="230" height="110" loading="lazy" />
+          <div class="tl-front">
+            <p class="tl-year">1978</p>
+            <h3 class="tl-title">The 8086 Processor</h3>
+            <p class="tl-hint" aria-hidden="true">Hover to explore</p>
+          </div>
+          <div class="tl-back">
+            <p>Intel launches the 8086, establishing the x86 architecture that still powers most PCs today &mdash; proof that one efficient design can stay useful for decades instead of being thrown away.</p>
+          </div>
+        </li>
 
-      <article class="card">
-        <img class="card-image" src="images/2004-lead-free.jpg" alt="Illustration of a shield protecting a microchip" loading="lazy" />
-        <div class="card-front">
-          <p class="year">2004</p>
-          <h2 class="title">Lead-Free Manufacturing</h2>
-          <p class="card-hint">Hover to explore &rarr;</p>
-        </div>
-        <div class="card-back">
-          <p>Intel eliminates most of the lead used in chip manufacturing, one of the semiconductor industry's earliest moves toward safer, cleaner production.</p>
-        </div>
-      </article>
+        <li class="tl-card" tabindex="0">
+          <img class="tl-image" src="images/1985-386.jpg" alt="Illustration of layered computer chips" width="230" height="110" loading="lazy" />
+          <div class="tl-front">
+            <p class="tl-year">1985</p>
+            <h3 class="tl-title">The 386 Processor</h3>
+            <p class="tl-hint" aria-hidden="true">Hover to explore</p>
+          </div>
+          <div class="tl-back">
+            <p>The 32-bit Intel386 introduces real multitasking &mdash; doing far more work per chip and per watt, an early lesson in getting more performance out of the same footprint.</p>
+          </div>
+        </li>
 
-      <article class="card">
-        <img class="card-image" src="images/2008-green-power.jpg" alt="Illustration of wind turbines and solar panels powering a factory" loading="lazy" />
-        <div class="card-front">
-          <p class="year">2008</p>
-          <h2 class="title">Top Green Power Purchaser</h2>
-          <p class="card-hint">Hover to explore &rarr;</p>
-        </div>
-        <div class="card-back">
-          <p>The EPA names Intel the largest voluntary purchaser of green power in the United States, setting the tone for a decade of renewable energy investment.</p>
-        </div>
-      </article>
+        <li class="tl-card" tabindex="0">
+          <img class="tl-image" src="images/2004-lead-free.jpg" alt="Illustration of a shield protecting a microchip" width="230" height="110" loading="lazy" />
+          <div class="tl-front">
+            <p class="tl-year">2004</p>
+            <h3 class="tl-title">Lead-Free Manufacturing</h3>
+            <p class="tl-hint" aria-hidden="true">Hover to explore</p>
+          </div>
+          <div class="tl-back">
+            <p>Intel eliminates most of the lead used in chip manufacturing, one of the semiconductor industry's earliest moves toward safer, cleaner production.</p>
+          </div>
+        </li>
 
-      <article class="card">
-        <img class="card-image" src="images/2014-conflict-free-minerals.jpg" alt="Illustration of responsibly sourced minerals" loading="lazy" />
-        <div class="card-front">
-          <p class="year">2014</p>
-          <h2 class="title">Conflict-Free Minerals</h2>
-          <p class="card-hint">Hover to explore &rarr;</p>
-        </div>
-        <div class="card-back">
-          <p>Intel completes a fully conflict-free supply chain for the tin, tantalum, tungsten, and gold in its processors &mdash; a multi-year effort to trace materials back to responsible sources.</p>
-        </div>
-      </article>
+        <li class="tl-card" tabindex="0">
+          <img class="tl-image" src="images/2008-green-power.jpg" alt="Illustration of wind turbines and solar panels powering a factory" width="230" height="110" loading="lazy" />
+          <div class="tl-front">
+            <p class="tl-year">2008</p>
+            <h3 class="tl-title">Top Green Power Purchaser</h3>
+            <p class="tl-hint" aria-hidden="true">Hover to explore</p>
+          </div>
+          <div class="tl-back">
+            <p>The EPA names Intel the largest voluntary purchaser of green power in the United States, setting the tone for a decade of renewable energy investment.</p>
+          </div>
+        </li>
 
-      <article class="card">
-        <img class="card-image" src="images/2020-rise-strategy.jpg" alt="Illustration of a target, representing a strategic goal" loading="lazy" />
-        <div class="card-front">
-          <p class="year">2020</p>
-          <h2 class="title">RISE Strategy Launches</h2>
-          <p class="card-hint">Hover to explore &rarr;</p>
-        </div>
-        <div class="card-back">
-          <p>Intel unveils its RISE strategy, formalizing 2030 targets across climate, water, waste, and inclusion &mdash; turning sustainability from a side project into a company-wide strategy.</p>
-        </div>
-      </article>
+        <li class="tl-card" tabindex="0">
+          <img class="tl-image" src="images/2014-conflict-free-minerals.jpg" alt="Illustration of responsibly sourced minerals" width="230" height="110" loading="lazy" />
+          <div class="tl-front">
+            <p class="tl-year">2014</p>
+            <h3 class="tl-title">Conflict-Free Minerals</h3>
+            <p class="tl-hint" aria-hidden="true">Hover to explore</p>
+          </div>
+          <div class="tl-back">
+            <p>Intel completes a fully conflict-free supply chain for the tin, tantalum, tungsten, and gold in its processors &mdash; a multi-year effort to trace materials back to responsible sources.</p>
+          </div>
+        </li>
 
-      <article class="card">
-        <img class="card-image" src="images/2024-intel-foundry.jpg" alt="Illustration of a modern factory building with solar panels" loading="lazy" />
-        <div class="card-front">
-          <p class="year">2024</p>
-          <h2 class="title">Intel Foundry Launches</h2>
-          <p class="card-hint">Hover to explore &rarr;</p>
-        </div>
-        <div class="card-back">
-          <p>Intel Foundry debuts as a systems foundry business built for the AI era, designed from the ground up around more sustainable manufacturing.</p>
-        </div>
-      </article>
+        <li class="tl-card" tabindex="0">
+          <img class="tl-image" src="images/2020-rise-strategy.jpg" alt="Illustration of a target, representing a strategic goal" width="230" height="110" loading="lazy" />
+          <div class="tl-front">
+            <p class="tl-year">2020</p>
+            <h3 class="tl-title">RISE Strategy Launches</h3>
+            <p class="tl-hint" aria-hidden="true">Hover to explore</p>
+          </div>
+          <div class="tl-back">
+            <p>Intel unveils its RISE strategy, formalizing 2030 targets across climate, water, waste, and inclusion &mdash; turning sustainability from a side project into a company-wide strategy.</p>
+          </div>
+        </li>
 
-      <article class="card card-goal">
-        <img class="card-image" src="images/2030-goal-ahead.jpg" alt="Illustration of a globe with a water droplet and renewable energy symbols" loading="lazy" />
-        <div class="card-front">
-          <p class="year">2030</p>
-          <h2 class="title">The Goal Ahead</h2>
-          <p class="card-hint">Hover to explore &rarr;</p>
-        </div>
-        <div class="card-back">
-          <p>By 2030, Intel is targeting net positive water use, 100% renewable electricity across its operations, and zero total waste to landfill &mdash; the next chapter in this timeline, still being written.</p>
-        </div>
-      </article>
+        <li class="tl-card" tabindex="0">
+          <img class="tl-image" src="images/2024-intel-foundry.jpg" alt="Illustration of a modern factory building with solar panels" width="230" height="110" loading="lazy" />
+          <div class="tl-front">
+            <p class="tl-year">2024</p>
+            <h3 class="tl-title">Intel Foundry Launches</h3>
+            <p class="tl-hint" aria-hidden="true">Hover to explore</p>
+          </div>
+          <div class="tl-back">
+            <p>Intel Foundry debuts as a systems foundry business built for the AI era, designed from the ground up around more sustainable manufacturing.</p>
+          </div>
+        </li>
 
-    </div>
+        <li class="tl-card tl-goal" tabindex="0">
+          <img class="tl-image" src="images/2030-goal-ahead.jpg" alt="Illustration of a globe with a water droplet and renewable energy symbols" width="230" height="110" loading="lazy" />
+          <div class="tl-front">
+            <p class="tl-year">2030</p>
+            <h3 class="tl-title">The Goal Ahead</h3>
+            <p class="tl-hint" aria-hidden="true">Hover to explore</p>
+          </div>
+          <div class="tl-back">
+            <p>By 2030, Intel is targeting net positive water use, 100% renewable electricity across its operations, and zero total waste to landfill &mdash; the next chapter in this timeline, still being written.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ THREE-COLUMN SECTION ============ -->
+    <section class="info-section" aria-labelledby="info-heading">
+      <div class="container">
+        <h2 id="info-heading" class="visually-hidden">Intel's sustainability priorities</h2>
+        <div class="row g-4 g-lg-5">
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="info-col h-100">
+            <h3 class="info-heading"><i class="bi bi-bar-chart-line" aria-hidden="true"></i><span>RISE Strategy</span></h3>
+            <p>Under its RISE framework (Responsible, Inclusive, Sustainable, Enabling), Intel set ambitious 2030 goals, including driving industry-leading progress on climate action, water stewardship, and waste reduction.</p>
+            <button type="button" class="btn btn-outline-primary learn-more" data-bs-toggle="modal" data-bs-target="#modal-rise">Learn more<span class="visually-hidden"> about RISE Strategy</span></button>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="info-col h-100">
+            <h3 class="info-heading"><i class="bi bi-globe-americas" aria-hidden="true"></i><span>Climate Commitment</span></h3>
+            <p>In 2022, Intel committed to achieving net-zero greenhouse gas emissions (Scope 1 and 2) by 2040. That commitment relies on decades of investment in energy efficiency, renewable power, and partnerships across the supply chain.</p>
+            <button type="button" class="btn btn-outline-primary learn-more" data-bs-toggle="modal" data-bs-target="#modal-climate">Learn more<span class="visually-hidden"> about Climate Commitment</span></button>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="info-col h-100">
+            <h3 class="info-heading"><i class="bi bi-droplet" aria-hidden="true"></i><span>Water &amp; Waste</span></h3>
+            <p>Intel is working to restore more water than it uses each year, in cooperation with local communities, and to send zero total waste to landfill by 2030 by recycling materials and moving toward a circular economy.</p>
+            <button type="button" class="btn btn-outline-primary learn-more" data-bs-toggle="modal" data-bs-target="#modal-water">Learn more<span class="visually-hidden"> about Water &amp; Waste</span></button>
+          </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="newsletter-section" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <h2 id="newsletter-heading" class="newsletter-heading"><i class="bi bi-envelope" aria-hidden="true"></i><span>Subscribe to our sustainability newsletter</span></h2>
+        <form id="newsletter-form" class="newsletter-form needs-validation" novalidate>
+          <div class="row g-2 justify-content-center">
+            <div class="col-12 col-md-7 col-lg-6">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control form-control-lg" id="email" name="email"
+                     autocomplete="email" required aria-describedby="email-help email-error" />
+              <div id="email-help" class="form-text">We'll only use your email to send the newsletter.</div>
+              <div id="email-error" class="invalid-feedback">Please enter a valid email address, like name@example.com.</div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-2 d-flex align-items-md-start submit-wrap">
+              <button type="submit" class="btn btn-primary btn-lg w-100">Subscribe</button>
+            </div>
+          </div>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <p>Built by Julio Leon Kayser &middot; Global Career Accelerator Web Development Project</p>
-    <p class="source-note">Milestones sourced from Intel's official corporate timeline and sustainability reporting.</p>
+    <div class="container">
+      <nav aria-label="Footer">
+        <ul class="footer-links list-inline">
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+          <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+          <li class="list-inline-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Intel Corporation. All rights reserved.</p>
+      <p class="source-note">Built by Julio Leon Kayser &middot; Global Career Accelerator Web Development Project. Milestones sourced from Intel's official corporate timeline and sustainability reporting.</p>
+    </div>
   </footer>
 
+  <!-- ============ POP-UPS FOR THE LEARN MORE BUTTONS ============ -->
+
+  <div class="modal fade" id="modal-rise" tabindex="-1" aria-labelledby="modal-rise-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="modal-rise-title">RISE Strategy</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Intel's RISE strategy sets 2030 goals for the whole company and ties them to the way it designs and builds products. It covers four areas: responsible business practices, inclusive culture, sustainable operations, and technology that helps others solve global challenges. Progress is reported publicly each year in Intel's corporate responsibility report.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-climate" tabindex="-1" aria-labelledby="modal-climate-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="modal-climate-title">Climate Commitment</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Scope 1 and 2 emissions come from Intel's own operations and the electricity it buys. Reaching net zero by 2040 depends on efficiency upgrades in its factories, a shift to renewable electricity (100% by 2030), and working with suppliers on the emissions that sit upstream of Intel's own sites.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-water" tabindex="-1" aria-labelledby="modal-water-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="modal-water-title">Water &amp; Waste</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Semiconductor manufacturing needs a lot of water, so Intel focuses on conserving it inside its factories and funding restoration projects in the watersheds where it operates. The aim is net positive water use by 2030. On waste, the goal is zero total waste to landfill by 2030, through reuse, recycling, and redesigning how materials move through its operations.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

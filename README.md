@@ -1,1 +1,0 @@
-# intel-sustainability-timeline
